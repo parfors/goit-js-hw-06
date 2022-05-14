@@ -25,14 +25,20 @@ const refs = {
 // refs.list.append(createMarkup(ingredients));
 // console.log(refs.list);
 
-const markupArray = [];
-ingredients.map(el => {
+// const markupArray = ingredients.map(el => {
+//   const liItem = document.createElement('li');
+//   liItem.textContent = el;
+//   liItem.classList.add('titel');
+//   return liItem
+// })
+
+function makeMarkupArray(array) {
+  return array.map(el => {
   const liItem = document.createElement('li');
   liItem.textContent = el;
   liItem.classList.add('titel');
-  markupArray.push(liItem);
+  return liItem
 })
+}
 
-// console.log(markupArray);
-refs.list.append(...markupArray);
-console.log(refs.list);
+refs.list.append(...makeMarkupArray(ingredients));

@@ -17,6 +17,17 @@ const refs = {
   list: document.querySelector('.gallery')
 }
 
+function makeImageMarkup({ url, alt }) {
+  return `    <li class="gallery-item"><img class="gallery-img" src="${url}" alt="${alt}" width="400"></li>
+`
+}
+// const image = {
+//     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'White and Black Long Fur Cat',
+//   }
+//   const imageMarkup = makeImageMarkup(image)
+// refs.list.insertAdjacentHTML("afterbegin", imageMarkup)
 
-
-// console.log(refs.list);
+const galleryMarkup = images.map(makeImageMarkup).join('');
+console.log(galleryMarkup);
+refs.list.insertAdjacentHTML("beforeend", galleryMarkup);
