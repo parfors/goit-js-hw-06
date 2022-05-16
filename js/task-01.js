@@ -1,7 +1,8 @@
 const refs = {
-    categoriesItemsEl: document.querySelectorAll('.item'),
-    categoriesTitleEl: document.querySelectorAll('.item h2'),
+    categoriesItemsEl: document.querySelector('#categories .item'),
+    categoriesTitleEl: document.querySelectorAll('#categories h2'),
 }
+
 
 function showCategoriTitle() {
 console.log(`Number of categories: ${refs.categoriesItemsEl.length}`);
