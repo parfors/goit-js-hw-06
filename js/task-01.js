@@ -1,5 +1,5 @@
 const refs = {
-    categoriesItemsEl: document.querySelector('#categories .item'),
+    categoriesItemsEl: document.querySelectorAll('#categories .item'),
     categoriesTitleEl: document.querySelectorAll('#categories h2'),
 }
 
